@@ -10,15 +10,15 @@
 
 # Berikut Source codenya :
 
-# % Untuk menampilkan backgroudnya
-hback = axes('unit','normalized','position',[0 0 1 1]);
-uistack(hback,'bottom');
-[back map] = imread('background.jpg');
-image(back)
-colormap(map)
-set(hback,'handlevisibility','off','visible','off');
+% Untuk menampilkan backgroudnya</br>
+hback = axes('unit','normalized','position',[0 0 1 1]);</br>
+uistack(hback,'bottom');</br>
+[back map] = imread('background.jpg');</br>
+image(back)</br>
+colormap(map)</br>
+set(hback,'handlevisibility','off','visible','off');</br>
 
-# % Untuk callback pushbutton
+% Untuk callback pushbutton</br>
 [filename,pathname] = uigetfile({'*.jpg','*.png'});
 Citra1 = imread([pathname, filename]);
 

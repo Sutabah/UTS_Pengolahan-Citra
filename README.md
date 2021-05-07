@@ -19,69 +19,69 @@ colormap(map)</br>
 set(hback,'handlevisibility','off','visible','off');</br>
 
 % Untuk callback pushbutton</br>
-[filename,pathname] = uigetfile({'*.jpg','*.png'});
-Citra1 = imread([pathname, filename]);
+[filename,pathname] = uigetfile({'*.jpg','*.png'});</br>
+Citra1 = imread([pathname, filename]);</br>
 
-# %Menampilkan Gambar di axes
-axes(handles.axes1);
-imshow(Citra1);
+ %Menampilkan Gambar di axes</br>
+axes(handles.axes1);</br>
+imshow(Citra1);</br>
 
-# %Mengubah gambar Rgb
-R = Citra1(:,:,1);
-G = Citra1(:,:,2);
-B = Citra1(:,:,3);
-Red = cat(3,R,G*0,B*0);
-Green = cat(3,R*0,G,B*0);
-Blue = cat(3,R*0,G*0,B);
+ %Mengubah gambar Rgb</br>
+R = Citra1(:,:,1);</br>
+G = Citra1(:,:,2);</br>
+B = Citra1(:,:,3);</br>
+Red = cat(3,R,G*0,B*0);</br>
+Green = cat(3,R*0,G,B*0);</br>
+Blue = cat(3,R*0,G*0,B);</br>
 
-# %Menampilkan Gambar di Axes2
-citra2 = Red
-axes(handles.axes2);
-imshow(citra2);
+ %Menampilkan Gambar di Axes2</br>
+citra2 = Red</br>
+axes(handles.axes2);</br>
+imshow(citra2);</br>
 
-# %Menampilkan Gambar di Axes3
-citra3 = Green 
-axes(handles.axes3);
-imshow(citra3);
+ %Menampilkan Gambar di Axes3</br>
+citra3 = Green </br>
+axes(handles.axes3);</br>
+imshow(citra3);</br>
 
-# %Menampilkan Gambar di Axes4
-citra4 = Blue
-axes(handles.axes4);
-imshow(citra4);
+ %Menampilkan Gambar di Axes4</br>
+citra4 = Blue</br>
+axes(handles.axes4);</br>
+imshow(citra4);</br>
 
-# %Menampilkan histogram red di Axes 5
-axes(handles.axes5);
-histogram(R(:),256,'FaceColor','r','EdgeColor','r')
-set(gca,'XLim',[0 255])
-set(gca,'YLim',[0 15000])
-grid on
+ %Menampilkan histogram red di Axes 5</br>
+axes(handles.axes5);</br>
+histogram(R(:),256,'FaceColor','r','EdgeColor','r')</br>
+set(gca,'XLim',[0 255])</br>
+set(gca,'YLim',[0 15000])</br>
+grid on</br>
 
-# %Menampilkan histogram red di Axes 6
-axes(handles.axes6);
-histogram(G(:),256,'FaceColor','g','EdgeColor','g')
-set(gca,'XLim',[0 255])
-set(gca,'YLim',[0 15000])
-grid on
+ %Menampilkan histogram red di Axes 6</br>
+axes(handles.axes6);</br>
+histogram(G(:),256,'FaceColor','g','EdgeColor','g')</br>
+set(gca,'XLim',[0 255])</br>
+set(gca,'YLim',[0 15000])</br>
+grid on</br>
 
-# %Menampilkan histogram red di Axes 7
-axes(handles.axes7);
-histogram(B(:),256,'FaceColor','b','EdgeColor','b')
-set(gca,'XLim',[0 255])
-set(gca,'YLim',[0 15000])
-grid on
+ %Menampilkan histogram red di Axes 7</br>
+axes(handles.axes7);</br>
+histogram(B(:),256,'FaceColor','b','EdgeColor','b')</br>
+set(gca,'XLim',[0 255])</br>
+set(gca,'YLim',[0 15000])</br>
+grid on</br>
 
-# %Menampilkan histogram Rgb di axes 8
-axes(handles.axes8);
-histogram(B(:),256,'FaceColor','b','EdgeColor','b')
-set(gca,'XLim',[0 255])
-set(gca,'YLim',[0 15000])
-hold on
-histogram(G(:),256,'FaceColor','g','EdgeColor','g')
-set(gca,'XLim',[0 255])
-set(gca,'YLim',[0 15000])
-histogram(R(:),256,'FaceColor','r','EdgeColor','r')
-set(gca,'XLim',[0 255])
-set(gca,'YLim',[0 15000])
-hold off
+ %Menampilkan histogram Rgb di axes 8</br>
+axes(handles.axes8);</br>
+histogram(B(:),256,'FaceColor','b','EdgeColor','b')</br>
+set(gca,'XLim',[0 255])</br>
+set(gca,'YLim',[0 15000])</br>
+hold on</br>
+histogram(G(:),256,'FaceColor','g','EdgeColor','g')</br>
+set(gca,'XLim',[0 255])</br>
+set(gca,'YLim',[0 15000])</br>
+histogram(R(:),256,'FaceColor','r','EdgeColor','r')</br>
+set(gca,'XLim',[0 255])</br>
+set(gca,'YLim',[0 15000])</br>
+hold off</br>
 
 
